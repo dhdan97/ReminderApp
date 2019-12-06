@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ReminderApp</string>
+    <string name="addReminder">Add Reminder</string>
+    <string name="settingsbutton">Settings</string>
+</resources>
