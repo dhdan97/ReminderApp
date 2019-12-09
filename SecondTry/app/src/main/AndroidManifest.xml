@@ -3,13 +3,15 @@
     package="com.example.secondtry">
 
     <application
+        android:name=".ReminderApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".EditReminderActivity"></activity>
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".NewReminderActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

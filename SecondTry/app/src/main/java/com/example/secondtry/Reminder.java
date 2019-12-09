@@ -1,25 +1,31 @@
 package com.example.secondtry;
 
-import java.util.Date;
 
 public class Reminder {
     private String name;
     private  String message;
-    private Date remindDate;
+    private String date;
+    private String time;
+    private int id;
 
     public Reminder(){
-        this("", "");
+        this("name", "message");
     }
 
     public Reminder(String name, String message){
-        this("name", "message", new Date());
+        this(name, message, "date", "time");
     }
 
-    public Reminder(String name, String message, Date remindDate){
+    public Reminder(String name, String message, String date) {this(name, message, date, "time");}
+
+    public Reminder(String name, String message, String date, String time){
         this.name = name;
         this.message = message;
-        this.remindDate = remindDate;
+        this.date = date;
+        this.time = time;
     }
+
+    public int getId() { return id; }
 
     public String getName(){
         return name;
@@ -29,7 +35,32 @@ public class Reminder {
         return message;
     }
 
-    public Date getRemindDate(){
-        return remindDate;
+    public String getDate(){
+        return date;
+    }
+
+    public String getTime() { return time; }
+
+    public void setId(int id) { this.id = id; }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+    public void setDate(String date){
+        this.date = date;
+    }
+
+    public void setTime(String time){
+        this.time = time;
+    }
+
+    public String toString(){
+        return name + ", " + message + "\n"
+                + date + ", " + time;
     }
 }
