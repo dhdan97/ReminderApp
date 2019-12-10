@@ -11,9 +11,6 @@ import android.widget.Toast;
 import static com.example.secondtry.MainActivity.reminderDb;
 
 public class EditReminderActivity extends AppCompatActivity {
-
-    //int ReminderPosition = getIntent().getIntExtra("position", -1);//keep an eye out in case this overrwrites the first element in mainList?
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,14 +92,6 @@ public class EditReminderActivity extends AppCompatActivity {
 
 
         Intent addReminder = new Intent(this, MainActivity.class);
-        /*addReminder.putExtra("name", nameString);
-        addReminder.putExtra("message", messageString);
-        addReminder.putExtra("dateYear", yearInt);
-        addReminder.putExtra("dateMonth", monthInt);
-        addReminder.putExtra("dateDay", dayInt);
-        addReminder.putExtra("dateHour", hourInt);
-        addReminder.putExtra("dateMin", minInt);
-        addReminder.putExtra("position", ReminderPosition);*/
 
         //sends data AND position of the reminder we edited to mainActivity
         startActivity(addReminder);

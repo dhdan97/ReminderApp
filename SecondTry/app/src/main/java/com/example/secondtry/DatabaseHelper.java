@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATEBASE_NAME = "reminder_db";
+    public static final String DATABASE_NAME = "reminder_db";
     public static final String TABLE_NAME = "reminder_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
@@ -19,8 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_5 = "TIME";
 
     public DatabaseHelper(@Nullable Context context) {
-        super(context, DATEBASE_NAME, null, 1);
-        //SQLiteDatabase db = this.getWritableDatabase();//create database and table for testing
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override

@@ -63,7 +63,7 @@ public class NewReminderActivity extends AppCompatActivity {
             return;
         }
 
-        //setAlarm(yearInt, monthInt, dayInt, hourInt, minInt, nameString, messageString);
+        //setAlarm(yearInt, monthInt, dayInt, hourInt, minInt, nameString, messageString);//Send alarm at given time
         //set Alarm
 
         String newReminderDate = monthInt + "/" + dayInt + "/" + yearInt;
@@ -103,12 +103,6 @@ public class NewReminderActivity extends AppCompatActivity {
 
     }
 
-    private void updateTimeText(Calendar c){
-        String timeText = "Alarm set for: ";
-        timeText += DateFormat.getTimeInstance(DateFormat.LONG).format(c);//SHORT??
-
-        //mTextView.setText(timeText);
-    }
 
     private void startAlarm(Calendar c, String name, String message){
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
